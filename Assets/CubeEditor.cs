@@ -9,7 +9,7 @@ using UnityEngine;
 public class CubeEditor : MonoBehaviour {
 
 
-
+   
     WayPoint wayPoint;
 
 
@@ -32,13 +32,13 @@ public class CubeEditor : MonoBehaviour {
     {
         int gridSize = wayPoint.GetGridSize();
 
-        transform.position = new Vector3(wayPoint.GetGridPos().x, 0f, wayPoint.GetGridPos().y);
+        transform.position = new Vector3(wayPoint.GetGridPos().x * gridSize, 0f, wayPoint.GetGridPos().y * gridSize);
     }
     private void UpdateLabel()
     {
         int gridSize = wayPoint.GetGridSize();
         TextMesh textMesh = GetComponentInChildren<TextMesh>();
-        string labelText = wayPoint.GetGridPos().x/ gridSize + "," + wayPoint.GetGridPos().y / gridSize;
+        string labelText = wayPoint.GetGridPos().x+ "," + wayPoint.GetGridPos().y;
         textMesh.text = labelText;
         gameObject.name = labelText;
     }

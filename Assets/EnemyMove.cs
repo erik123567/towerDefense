@@ -6,8 +6,8 @@ public class EnemyMove : MonoBehaviour {
     [SerializeField] List<WayPoint> path;
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(PrintAllWayPoints());
-        Debug.Log("back at at start");
+   //     StartCoroutine(PrintAllWayPoints());
+       
     }
 	
 	// Update is called once per frame

@@ -16,7 +16,12 @@ public class WayPoint : MonoBehaviour {
     }
     public Vector2 GetGridPos()
     {
-        return new Vector2(Mathf.RoundToInt(transform.position.x / gridSize) * gridSize,
-         Mathf.RoundToInt(transform.position.z / gridSize) * gridSize);
+        return new Vector2(Mathf.RoundToInt(transform.position.x / gridSize),
+         Mathf.RoundToInt(transform.position.z / gridSize));
+    }
+    public void SetTopColor(Color color)
+    {
+       MeshRenderer topMeshRender = transform.Find("top").GetComponent<MeshRenderer>();
+        topMeshRender.material.color = color;
     }
 }
