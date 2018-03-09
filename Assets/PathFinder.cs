@@ -24,17 +24,14 @@ public class PathFinder : MonoBehaviour {
     {
         foreach(Vector2 direction in directions)
         {
-            Vector2 explorationCoordates = startWayPoint.GetGridPos() + Mathf.Round(direction);
+            Vector2 explorationCoordates = startWayPoint.GetGridPos() + direction;
             grid[explorationCoordates].SetTopColor(Color.blue);
             if (grid.ContainsKey(explorationCoordates))
             {
                 print("ya");
             }
         }
-        foreach(var v in grid)
-        {
-            print(v.Key + ", " + v.Value);
-        }
+
     }
 
     void ColorStartAndEnd()
